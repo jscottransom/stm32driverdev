@@ -1,0 +1,39 @@
+[package]
+name = "stm32dev"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m = "0.7.2"
+cortex-m-rt = { version = "0.7.1", features = ["device"] }
+cortex-m-semihosting = "0.3.7"
+panic-itm = "0.4.2"
+log = "0.4.8"
+rtt-target = {version = "0.3.1", features = ["cortex-m"]}
+panic-halt = "0.2.0"
+# Replace stm32f303xc with your target chip, see next section for more info
+stm32f3xx-hal = { version = "0.9.0", features = ["ld", "rt", "stm32f303xc"] }
+
+[dependencies.stm32f3]
+version = "0.14.0"
+features = ["stm32f303", "rt"]
+
+#[dependencies.f3]
+#features = ["rt"]
+#version = "0.6.1"
+
+[[bin]]
+name = "led"
+path = "applications/src/bin/simple_led.rs"
+
+[[bin]]
+name = "bitfield"
+path = "applications/src/bin/bitfield_led.rs"
+
+[[bin]]
+name = "interrupt"
+path = "applications/src/bin/interrupt.rs"
+
+
