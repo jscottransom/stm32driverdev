@@ -200,11 +200,6 @@ void USART_Init(USART_Handle_t *pUSARTHandle) {
 
 	pUSARTHandle->pUSARTx->CR3 = tempreg;
 
-	/******************************** Configuration of BRR(Baudrate register)******************************************/
-
-		//Implement the code to configure the baud rate
-		//We will cover this in the lecture. No action required here
-
 	}
 
 
