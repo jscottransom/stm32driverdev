@@ -18,10 +18,7 @@ fn main() -> ! {
 
     // Enable the EXTI0 Line Interrupt
     core_peripherals.NVIC.enable(stm32f303::Interrupt::EXTI0);
-
-    dp.EXTI.
-
-
+    dp.EXTI0.enable(stm32f303::Interrupt::EXTI10);
 
     loop {}
 }
