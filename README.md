@@ -4,7 +4,7 @@ This repository contains custom low-level drivers and sample code for the [STM32
 
 ---
 
-## 📚 What’s Included
+## What’s Included
 
 ### C Drivers
 - Written directly from the STM32F3 reference manual and datasheets
